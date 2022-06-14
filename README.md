@@ -2,5 +2,4 @@
 [![Actions Status](https://github.com/max9680/php-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/max9680/php-project-lvl1/actions)
 
 ### CodeClimate bages
-[![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
-
+[![maintainability](https://api.codeclimate.com/v1/badges/90cdeb61ff2a14490868/maintainability)](https://codeclimate.com/github/max9680/php-project-lvl1/maintainability)

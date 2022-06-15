@@ -3,3 +3,4 @@
 
 ### CodeClimate bages
 [![maintainability](https://api.codeclimate.com/v1/badges/90cdeb61ff2a14490868/maintainability)](https://codeclimate.com/github/max9680/php-project-lvl1/maintainability)
+[![asciicast](https://asciinema.org/a/JMYlszJQxKglV8X5KkaMJSNFG.svg)](https://asciinema.org/a/JMYlszJQxKglV8X5KkaMJSNFG)

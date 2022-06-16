@@ -5,24 +5,25 @@ require_once __DIR__ .'/../vendor/autoload.php';
 
 use function BrainGames\Cli\line;
 use function BrainGames\Cli\prompt;
+use function BrainGames\Engine\result;
+use function BrainGames\Engine\welcome;
 
-line("Welcome to the Brain Game!\n");
-$name = prompt('May I have your name? ');
-line("Hello, %s!\n", $name);
+$name = welcome();
 
 line("Answer \"yes\" if the number is even, otherwise answer \"no\"\n");
 
 $numberCorrectAnswers = 0;
+$incorrectAnswer = 0;
+$numberGames = 3;
 
-for ($i = 0;$i < 3;$i++) {
+for ($i = 0;$i < $numberGames;$i++) {
     $startNumber = 0;
     $endNumber = 100;
     $number = rand($startNumber , $endNumber);
     line("Question: %s\n", $number);
     $answer = prompt("Your answer: ");
     if (($answer !== "yes") && ($answer !== "no")) {
-        line("Incorrect answer.");
-        line("Let's try again!\n");
+        $incorrectAnswer = 1;
         break;
     }
 
@@ -43,8 +44,4 @@ for ($i = 0;$i < 3;$i++) {
 
 }
 
-if ($numberCorrectAnswers == 3) {
-    line("Congratilations, $name!\n");
-} else {
-    line("Let's try again, $name!\n");
-}
+result($numberCorrectAnswers, $name, $incorrectAnswer);

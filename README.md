@@ -12,3 +12,6 @@
 
 ### Brain-calc game
 [![asciicast](https://asciinema.org/a/BjZ4Y4R8j4blPXC09rKvUJoQk.svg)](https://asciinema.org/a/BjZ4Y4R8j4blPXC09rKvUJoQk?autoplay=1)
+
+### Brain-gcd game (get common divisor game)
+[![asciicast](https://asciinema.org/a/A10NZRGd0atq8AmazZ96SiYU3.svg)](https://asciinema.org/a/A10NZRGd0atq8AmazZ96SiYU3?autoplay=1)

@@ -15,3 +15,6 @@
 
 ### Brain-gcd game (get common divisor game)
 [![asciicast](https://asciinema.org/a/A10NZRGd0atq8AmazZ96SiYU3.svg)](https://asciinema.org/a/A10NZRGd0atq8AmazZ96SiYU3?autoplay=1)
+
+### Brain-progression game
+[![asciicast](https://asciinema.org/a/sklUymhYYwyKh4q6ztaJeLRnk.svg)](https://asciinema.org/a/sklUymhYYwyKh4q6ztaJeLRnk?autoplay=1)

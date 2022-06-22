@@ -1,14 +1,24 @@
-### Hexlet tests and linter status:
+## Hexlet tests and linter status:
 [![Actions Status](https://github.com/max9680/php-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/max9680/php-project-lvl1/actions)
 
 ### CodeClimate bages
 [![maintainability](https://api.codeclimate.com/v1/badges/90cdeb61ff2a14490868/maintainability)](https://codeclimate.com/github/max9680/php-project-lvl1/maintainability)
 
+# Brain Games
+Brain Games is set of five console games. Each game consists from three questions. If you give correct answer for all three questions, you win. If you give incorrect answer, you are lose.
+
+## Games:
+- **brain-calc** - check your arithmetic skills.
+- **brain-even** - answer if number is even.
+- **brain-gcd** - find the greatest common divisor of two numbers.
+- **brain-prime** - answer if number is prime.
+- **brain-progression** - name hidden item of arithmetic progression.
+
+### Install games
+[![asciicast](https://asciinema.org/a/kl8kMzf9I14yxXbjjqXrQUiOk.svg)](https://asciinema.org/a/kl8kMzf9I14yxXbjjqXrQUiOk)
+
 ### Brain-even game
 [![asciicast](https://asciinema.org/a/V6D19yCNklSpHUHjXKef2EIM3.svg)](https://asciinema.org/a/V6D19yCNklSpHUHjXKef2EIM3?autoplay=1)
-
-### Make install
-[![asciicast](https://asciinema.org/a/kl8kMzf9I14yxXbjjqXrQUiOk.svg)](https://asciinema.org/a/kl8kMzf9I14yxXbjjqXrQUiOk)
 
 ### Brain-calc game
 [![asciicast](https://asciinema.org/a/BjZ4Y4R8j4blPXC09rKvUJoQk.svg)](https://asciinema.org/a/BjZ4Y4R8j4blPXC09rKvUJoQk?autoplay=1)

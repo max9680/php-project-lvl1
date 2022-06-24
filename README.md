@@ -4,16 +4,6 @@
 ### CodeClimate bages
 [![maintainability](https://api.codeclimate.com/v1/badges/90cdeb61ff2a14490868/maintainability)](https://codeclimate.com/github/max9680/php-project-lvl1/maintainability)
 
-# Brain Games
-Brain Games is set of five console games. Each game consists from three questions. If you give correct answer for all three questions, you win. If you give incorrect answer, you are lose.
-
-## Games:
-- **brain-calc** - check your arithmetic skills.
-- **brain-even** - answer if number is even.
-- **brain-gcd** - find the greatest common divisor of two numbers.
-- **brain-prime** - answer if number is prime.
-- **brain-progression** - name hidden item of arithmetic progression.
-
 ### Install games
 [![asciicast](https://asciinema.org/a/kl8kMzf9I14yxXbjjqXrQUiOk.svg)](https://asciinema.org/a/kl8kMzf9I14yxXbjjqXrQUiOk)
 

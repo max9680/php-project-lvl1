@@ -2,7 +2,7 @@
 
 namespace BrainGames\Engine;
 
-require_once __DIR__  . '/../vendor/autoload.php';
+// require_once __DIR__  . '/../vendor/autoload.php';
 
 use function BrainGames\Cli\line;
 use function BrainGames\Cli\prompt;

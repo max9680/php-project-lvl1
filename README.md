@@ -10,6 +10,16 @@
 # Brain Games
 Brain Games is set of five console games. Each game consists from three questions. If you give correct answer for all three questions, you win. If you give incorrect answer, you are lose.
 
+## Requirements
+* PHP >= 7.4
+* [wp-cli/php-cli-tools](https://github.com/wp-cli/php-cli-tools)
+
+## Setup
+```sh
+$ git clone git@github.com:max9680/php-project-lvl1.git
+
+$ make install
+
 ## Games:
 - **brain-calc** - check your arithmetic skills.
 - **brain-even** - answer if number is even.

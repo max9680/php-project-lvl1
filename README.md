@@ -1,7 +1,6 @@
 ## Hexlet tests and linter status:
 [![Actions Status](https://github.com/max9680/php-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/max9680/php-project-lvl1/actions)
 
-## Linter status
 [![main](https://github.com/max9680/php-project-lvl1/actions/workflows/main.yml/badge.svg)](https://github.com/max9680/php-project-lvl1/actions/workflows/main.yml)
 
 ### CodeClimate bages

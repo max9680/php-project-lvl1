@@ -12,8 +12,12 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v3
       
+      - name: list files
+        run: ls -al
+
       - name: Run linter validate
         run: make lint

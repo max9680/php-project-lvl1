@@ -1,4 +1,4 @@
-name: CI
+name: main
 
 on:
   push:
@@ -20,7 +20,7 @@ jobs:
         run: ls -al
 
       - name: Setup PHP
-        uses: actions/checkout@v2
+        uses: shivammathur/setup-php@v2
         with:
           php-version: '7.4'
 

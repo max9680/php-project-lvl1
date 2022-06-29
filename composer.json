@@ -10,15 +10,16 @@
             ],
     "description": "Brain games",
     "license": "MIT",
-    "autoload": {
-		"files": [
-        "src/Engine.php",
-        "src/Games/even.php",
-        "src/Games/calc.php",
-        "src/Games/gcd.php",
-        "src/Games/progression.php",
-        "src/Games/prime.php"
-		]
+    "prefer-stable": true,
+        "autoload": {
+            "files": [
+                    "src/Engine.php",
+                    "src/Games/even.php",
+                    "src/Games/calc.php",
+                    "src/Games/gcd.php",
+                    "src/Games/progression.php",
+                    "src/Games/prime.php"
+            ]
     },
     "authors": [
         {

@@ -1,13 +1,11 @@
 {
     "name": "hexlet/code",
-    "bin": [
-            "bin/brain-games",
-            "bin/brain-even",
-            "bin/brain-calc",
-            "bin/brain-gcd",
-            "bin/brain-progression",
-            "bin/brain-prime"
-            ],
+    "authors": [
+        {
+            "name": "m.vorobyev",
+            "email": "max9680@mail.ru"
+        }
+    ],
     "description": "Brain games",
     "license": "MIT",
     "prefer-stable": true,
@@ -21,12 +19,14 @@
                     "src/Games/prime.php"
             ]
     },
-    "authors": [
-        {
-            "name": "m.vorobyev",
-            "email": "max9680@mail.ru"
-        }
-    ],
+        "bin": [
+                "bin/brain-games",
+                "bin/brain-even",
+                "bin/brain-calc",
+                "bin/brain-gcd",
+                "bin/brain-progression",
+                "bin/brain-prime"
+                ],
     "require": {
         "wp-cli/php-cli-tools": "^0.11.13"
     },

@@ -21,7 +21,6 @@ $ git clone git@github.com:max9680/php-project-lvl1.git
 $ make install
 ```
 
-
 ## Games:
 - **brain-calc** - check your arithmetic skills.
 - **brain-even** - answer if number is even.

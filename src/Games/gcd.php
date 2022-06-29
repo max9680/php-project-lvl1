@@ -11,19 +11,16 @@ function runGame()
 {
     $name = welcome();
     line("Find the greatest common divisor of given numbers.");
-    
     $numberCorrectAnswers = 0;
     $incorrectAnswer = 0;
     $numberGames = 3;
-    
-    for ($i = 0;$i < $numberGames;$i++) {
+    for ($i = 0; $i < $numberGames; $i++) {
         $startNumber = 0;
         $endNumber = 100;
-        $numberOne = rand($startNumber , $endNumber);
-        $numberTwo = rand($startNumber , $endNumber);
+        $numberOne = rand($startNumber, $endNumber);
+        $numberTwo = rand($startNumber, $endNumber);
         line("Question: %s", "$numberOne $numberTwo");
         $answer = prompt("Your answer");
-        
         if (!is_numeric($answer)) {
             $incorrectAnswer = 1;
             break;
@@ -41,22 +38,20 @@ function runGame()
 
         $correctAnswer = $firstNumber;
         while ($correctAnswer > 0) {
-                if ((($firstNumber % $correctAnswer ) == 0) && (($secondNumber % $correctAnswer ) == 0)) {
-                            break;
-                                }
-                    $correctAnswer--;
+            if ((($firstNumber % $correctAnswer ) == 0) && (($secondNumber % $correctAnswer ) == 0)) {
+                break;
+            }
+            $correctAnswer--;
         }
 
         if ($answer == $correctAnswer) {
             line("Correct!");
-            $numberCorrectAnswers++; 
+            $numberCorrectAnswers++;
         } else {
             line("%s is wrong answer ;(. ", $answer);
             line("Correct answer was %s.", $correctAnswer);
             break;
         }
-
-}
-
-result($numberCorrectAnswers, $name, $incorrectAnswer);
+    }
+    result($numberCorrectAnswers, $name, $incorrectAnswer);
 }

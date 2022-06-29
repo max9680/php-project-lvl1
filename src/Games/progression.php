@@ -10,14 +10,11 @@ use function Cli\prompt;
 function runGame()
 {
     $name = welcome();
-
     line("What number is missing in the progression?");
-
     $numberCorrectAnswers = 0;
     $incorrectAnswer = 0;
     $numberGames = 3;
-
-    for ($i = 0;$i < $numberGames;$i++) {
+    for ($i = 0; $i < $numberGames; $i++) {
         $amoutNumbers = rand(5, 10);
         $startNumber = rand(1, 50);
         $sumProgression = rand(1, 50);
@@ -32,12 +29,10 @@ function runGame()
                 $progressionInQuestion = $progressionInQuestion . ' ..';
             } else {
                 $progressionInQuestion = $progressionInQuestion . " " . $progression[$j];
-                        }
+            }
         }
-
         line("Question: %s ", "$progressionInQuestion");
         $answer = prompt("Your answer");
-        
         if (!is_numeric($answer)) {
             $incorrectAnswer = 1;
             break;
@@ -47,14 +42,12 @@ function runGame()
 
         if ($answer == $progression[$hiddenItem]) {
             line("Correct!");
-            $numberCorrectAnswers++; 
+            $numberCorrectAnswers++;
         } else {
             line("%s is wrong answer ;(. ", $answer);
             line("Correct answer was %s.", $progression[$hiddenItem]);
             break;
         }
-
     }
-
     result($numberCorrectAnswers, $name, $incorrectAnswer);
 }

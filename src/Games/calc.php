@@ -17,48 +17,47 @@ function runGame()
     $incorrectAnswer = 0;
     $numberGames = 3;
 
-    for ($i = 0;$i < $numberGames;$i++) {
+    for ($i = 0; $i < $numberGames; $i++) {
         $startNumber = 0;
         $endNumber = 100;
         $operands = ['+','-','*'];
-        $firstNumber = rand($startNumber , $endNumber);
-        $secondNumber = rand($startNumber , $endNumber);
+        $firstNumber = rand($startNumber, $endNumber);
+        $secondNumber = rand($startNumber, $endNumber);
         $randIndex = array_rand($operands, 1);
         $operation = $firstNumber . " " . $operands[$randIndex] . " " . $secondNumber;
-        
+
         line("Question: %s", $operation);
         $answer = prompt("Your answer");
-        
+
         if (!is_numeric($answer)) {
             $incorrectAnswer = 1;
             break;
         } else {
             $answer = intval($answer);
         }
-        
-        switch($operands[$randIndex]) {
+
+        switch ($operands[$randIndex]) {
             case '+':
                 $operationResult = $firstNumber + $secondNumber;
                 break;
-                case '-':
-                    $operationResult = $firstNumber - $secondNumber;
-                    break;
-                    case '*':
-                        $operationResult = $firstNumber * $secondNumber;
-                        break;
-                    }
-                    
-                    if ($answer == $operationResult) {
-                        line("Correct!");
-                        $numberCorrectAnswers++; 
-                    } else {
-                        line("'%s' is wrong answer ;(. ", $answer);
-                        line("Correct answer was '%s'.", $operationResult);
-                        break;
-                        $startNumber = 0;
+            case '-':
+                $operationResult = $firstNumber - $secondNumber;
+                break;
+            case '*':
+                $operationResult = $firstNumber * $secondNumber;
+                break;
+        }
+
+        if ($answer == $operationResult) {
+            line("Correct!");
+            $numberCorrectAnswers++;
+        } else {
+            line("'%s' is wrong answer ;(. ", $answer);
+            line("Correct answer was '%s'.", $operationResult);
+            break;
+            $startNumber = 0;
+        }
     }
 
-}
-
-result($numberCorrectAnswers, $name, $incorrectAnswer);
+    result($numberCorrectAnswers, $name, $incorrectAnswer);
 }

@@ -2,16 +2,12 @@
 
 namespace BrainGames\Cli;
 
-function line($text, $var1 = null)
-{
-    if ($var1 != null) {
-        $text = substr_replace($text, $var1, strpos($text, "%s"), 2);
-    }
-        echo ("$text");
-}
+use function Cli\line;
+use function Cli\prompt;
 
-function prompt($text)
+function welcome()
 {
-        echo "$text";
-        return trim(fgets(STDIN));
+    line("Welcome to the Brain Game!");
+    $name = prompt("May I have your name?");
+    line("Hello, %s!", $name);
 }

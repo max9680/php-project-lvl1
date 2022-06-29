@@ -3,56 +3,6 @@
 
 require_once __DIR__ .'/../vendor/autoload.php';
 
-use function BrainGames\Cli\line;
-use function BrainGames\Cli\prompt;
-use function BrainGames\Engine\result;
-use function BrainGames\Engine\welcome;
+use function BrainGames\Games\Progression\runGame;
 
-$name = welcome();
-
-line("What number is missing in the progression?\n");
-
-$numberCorrectAnswers = 0;
-$incorrectAnswer = 0;
-$numberGames = 3;
-
-for ($i = 0;$i < $numberGames;$i++) {
-    $amoutNumbers = rand(5, 10);
-    $startNumber = rand(1, 50);
-    $sumProgression = rand(1, 50);
-    $progression = array();
-    $hiddenItem = rand(0, $amoutNumbers - 1);
-    $progressionInQuestion = '';
-
-    //Creating progression
-    for ($j = 0; $j < $amoutNumbers; $j++) {
-        $progression[$j] = $startNumber + $j * $sumProgression;
-        if ($j == $hiddenItem) {
-            $progressionInQuestion = $progressionInQuestion . ' ..';
-        } else {
-            $progressionInQuestion = $progressionInQuestion . " " . $progression[$j];
-                    }
-    }
-
-    line("Question: %s \n", "$progressionInQuestion");
-    $answer = prompt("Your answer: ");
-    
-    if (!is_numeric($answer)) {
-        $incorrectAnswer = 1;
-        break;
-    } else {
-        $answer = intval($answer);
-    }
-
-    if ($answer == $progression[$hiddenItem]) {
-        line("Correct!\n");
-        $numberCorrectAnswers++; 
-    } else {
-        line("%s is wrong answer ;(. ", $answer);
-        line("Correct answer was %s.\n", $progression[$hiddenItem]);
-        break;
-    }
-
-}
-
-result($numberCorrectAnswers, $name, $incorrectAnswer);
+runGame();

@@ -4,8 +4,8 @@ namespace BrainGames\Engine;
 
 // require_once __DIR__  . '/../vendor/autoload.php';
 
-use function Cli\line;
-use function Cli\prompt;
+use function cli\line;
+use function cli\prompt;
 
 function welcome()
 {

@@ -15,7 +15,7 @@ function runGame()
     $incorrectAnswer = 0;
     $numberGames = 3;
     for ($i = 0; $i < $numberGames; $i++) {
-        $startNumber = 0;
+        $startNumber = 1;
         $endNumber = 100;
         $numberOne = rand($startNumber, $endNumber);
         $numberTwo = rand($startNumber, $endNumber);

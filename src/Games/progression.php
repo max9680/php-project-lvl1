@@ -16,8 +16,8 @@ function runGame()
     $numberGames = 3;
     for ($i = 0; $i < $numberGames; $i++) {
         $amoutNumbers = rand(5, 10);
-        $startNumber = rand(1, 50);
-        $sumProgression = rand(1, 50);
+        $startNumber = rand(1, 10);
+        $sumProgression = rand(1, 10);
         $progression = array();
         $hiddenItem = rand(0, $amoutNumbers - 1);
         $progressionInQuestion = '';

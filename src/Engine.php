@@ -15,7 +15,7 @@ function welcome()
     return $name;
 }
 
-function result($numberCorrectAnswers, $name, $incorrectAnswer)
+function result(int $numberCorrectAnswers, string $name, int $incorrectAnswer)
 {
     if ($incorrectAnswer == 1) {
         line("Incorrect answer. ");

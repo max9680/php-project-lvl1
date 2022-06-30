@@ -31,7 +31,7 @@ function runGame()
                 $progressionInQuestion = $progressionInQuestion . " " . $progression[$j];
             }
         }
-        line("Question: %s", "$progressionInQuestion");
+        line("Question:%s", "$progressionInQuestion");
         $answer = prompt("Your answer");
         if (!is_numeric($answer)) {
             $incorrectAnswer = 1;

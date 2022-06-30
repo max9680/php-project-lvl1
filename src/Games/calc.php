@@ -4,8 +4,8 @@ namespace BrainGames\Games\Calc;
 
 use function BrainGames\Engine\welcome;
 use function BrainGames\Engine\result;
-use function Cli\line;
-use function Cli\prompt;
+use function cli\line;
+use function cli\prompt;
 
 function runGame()
 {
@@ -38,13 +38,13 @@ function runGame()
 
         switch ($operands[$randIndex]) {
             case '+':
-                $operationResult = $firstNumber + $secondNumber;
+                (int)$operationResult = $firstNumber + $secondNumber;
                 break;
             case '-':
-                $operationResult = $firstNumber - $secondNumber;
+                (int)$operationResult = $firstNumber - $secondNumber;
                 break;
             case '*':
-                $operationResult = $firstNumber * $secondNumber;
+                (int)$operationResult = $firstNumber * $secondNumber;
                 break;
         }
 

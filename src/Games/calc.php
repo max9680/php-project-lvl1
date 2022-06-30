@@ -55,7 +55,6 @@ function runGame()
             line("'%s' is wrong answer ;(. ", $answer);
             line("Correct answer was '%s'.", $operationResult);
             break;
-            $startNumber = 0;
         }
     }
 

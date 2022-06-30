@@ -15,6 +15,7 @@ function runGame()
     $numberCorrectAnswers = 0;
     $incorrectAnswer = 0;
     $numberGames = 3;
+    (string)$correctAnswer = null;
     for ($i = 0; $i < $numberGames; $i++) {
         $number = rand(1, 100);
         line("Question: %s ", "$number");

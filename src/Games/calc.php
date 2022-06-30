@@ -18,14 +18,13 @@ function runGame()
     $numberGames = 3;
 
     for ($i = 0; $i < $numberGames; $i++) {
-        (int) $startNumber = 0;
-        (int) $endNumber = 100;
+        $startNumber = 0;
+        $endNumber = 100;
         $operands = ['+','-','*'];
-        (int) $firstNumber = rand($startNumber, $endNumber);
-        (int) $secondNumber = rand($startNumber, $endNumber);
+        $firstNumber = rand($startNumber, $endNumber);
+        $secondNumber = rand($startNumber, $endNumber);
         $randIndex = array_rand($operands, 1);
         $operation = $firstNumber . " " . $operands[$randIndex] . " " . $secondNumber;
-
         line("Question: %s", $operation);
         $answer = prompt("Your answer");
 

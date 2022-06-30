@@ -16,6 +16,7 @@ function runGame()
     $numberCorrectAnswers = 0;
     $incorrectAnswer = 0;
     $numberGames = 3;
+    (int) $operationResult = null;
 
     for ($i = 0; $i < $numberGames; $i++) {
         $startNumber = 0;

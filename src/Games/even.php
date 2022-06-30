@@ -4,8 +4,8 @@ namespace BrainGames\Games\Even;
 
 use function BrainGames\Engine\welcome;
 use function BrainGames\Engine\result;
-use function Cli\line;
-use function Cli\prompt;
+use function cli\line;
+use function cli\prompt;
 
 function runGame()
 {

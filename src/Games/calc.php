@@ -18,11 +18,11 @@ function runGame()
     $numberGames = 3;
 
     for ($i = 0; $i < $numberGames; $i++) {
-        $startNumber = 0;
-        $endNumber = 100;
+        (int) $startNumber = 0;
+        (int) $endNumber = 100;
         $operands = ['+','-','*'];
-        $firstNumber = rand($startNumber, $endNumber);
-        $secondNumber = rand($startNumber, $endNumber);
+        (int) $firstNumber = rand($startNumber, $endNumber);
+        (int) $secondNumber = rand($startNumber, $endNumber);
         $randIndex = array_rand($operands, 1);
         $operation = $firstNumber . " " . $operands[$randIndex] . " " . $secondNumber;
 
@@ -38,13 +38,13 @@ function runGame()
 
         switch ($operands[$randIndex]) {
             case '+':
-                (int)$operationResult = $firstNumber + $secondNumber;
+                $operationResult = $firstNumber + $secondNumber;
                 break;
             case '-':
-                (int)$operationResult = $firstNumber - $secondNumber;
+                $operationResult = $firstNumber - $secondNumber;
                 break;
             case '*':
-                (int)$operationResult = $firstNumber * $secondNumber;
+                $operationResult = $firstNumber * $secondNumber;
                 break;
         }
 

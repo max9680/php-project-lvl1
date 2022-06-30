@@ -21,7 +21,7 @@ function result($numberCorrectAnswers, $name, $incorrectAnswer)
         line("Incorrect answer. ");
     }
     if ($numberCorrectAnswers == 3) {
-        line("Congratilations, $name!");
+        line("Congratulations, $name!");
     } else {
         line("Let's try again, $name!");
     }

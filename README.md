@@ -7,7 +7,7 @@ Brain Games is set of five console games. Each game consists from three question
 
 ## Requirements
 * PHP >= 7.4
-* [wp-cli/php-cli-tools](https://github.com/wp-cli/php-cli-tools)
+* [Composer](https://getcomposer.org/)
 
 ## Setup
 ```sh

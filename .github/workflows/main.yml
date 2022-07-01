@@ -14,11 +14,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - name: Check out repository code
+        uses: actions/checkout@v3
       
-      - name: list files
-        run: ls -al
-
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:

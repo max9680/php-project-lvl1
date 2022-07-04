@@ -3,6 +3,7 @@
 namespace BrainGames\Games\Calc;
 
 use function BrainGames\Engine\welcome;
+use function BrainGames\Engine\gameEngine;
 use function BrainGames\Engine\result;
 use function cli\line;
 use function cli\prompt;
@@ -10,13 +11,9 @@ use function cli\prompt;
 function runGame()
 {
     $name = welcome("What is the result of the expression?");
-
-//    line("What is the result of the expression?");
-
-    $numberCorrectAnswers = 0;
-    $incorrectAnswer = 0;
     $numberGames = 3;
     (int) $operationResult = null;
+    (array) $gameData = [];
 
     for ($i = 0; $i < $numberGames; $i++) {
         $startNumber = 0;
@@ -26,37 +23,20 @@ function runGame()
         $secondNumber = rand($startNumber, $endNumber);
         $randIndex = array_rand($operands, 1);
         $operation = $firstNumber . " " . $operands[$randIndex] . " " . $secondNumber;
-        line("Question: %s", $operation);
-        $answer = prompt("Your answer");
-
-        if (!is_numeric($answer)) {
-            $incorrectAnswer = 1;
-            break;
-        } else {
-            $answer = intval($answer);
-        }
 
         switch ($operands[$randIndex]) {
             case '+':
-                $operationResult = $firstNumber + $secondNumber;
+                (int) $operationResult = $firstNumber + $secondNumber;
                 break;
             case '-':
-                $operationResult = $firstNumber - $secondNumber;
+                (int) $operationResult = $firstNumber - $secondNumber;
                 break;
             case '*':
-                $operationResult = $firstNumber * $secondNumber;
+                (int) $operationResult = $firstNumber * $secondNumber;
                 break;
         }
-
-        if ($answer == $operationResult) {
-            line("Correct!");
-            $numberCorrectAnswers++;
-        } else {
-            line("'%s' is wrong answer ;(. ", $answer);
-            line("Correct answer was '%s'.", $operationResult);
-            break;
-        }
+        $gameData[$i][0] = $operation;
+        $gameData[$i][1] = $operationResult;
     }
-
-    result($numberCorrectAnswers, $name, $incorrectAnswer);
+    gameEngine($gameData, $name, $numberGames);
 }

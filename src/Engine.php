@@ -16,6 +16,24 @@ function welcome(string $gameDescription = null)
     return $name;
 }
 
+function gameEngine(array $gameData, string $name, int $numberGames)
+{
+    for ($i = 0; $i < $numberGames; $i++) {
+        line("Question: %s", $gameData[$i][0]);
+        (int) $answer = prompt("Your answer");
+        if ($answer == $gameData[$i][1]) {
+            line("Correct!");
+            if ($i == ($numberGames - 1)) {
+                line("Congratulations, %s!", $name);
+            }
+        } else {
+            line("'%s' is wrong answer ;(. Correct answer was '%s'.", $answer, $gameData[$i][1]);
+            line("Let's try again, $name!");
+            return;
+        }
+    }
+}
+
 function result(int $numberCorrectAnswers, string $name, int $incorrectAnswer)
 {
     if ($incorrectAnswer == 1) {

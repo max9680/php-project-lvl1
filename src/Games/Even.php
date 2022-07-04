@@ -3,45 +3,27 @@
 namespace BrainGames\Games\Even;
 
 use function BrainGames\Engine\welcome;
-use function BrainGames\Engine\result;
+use function BrainGames\Engine\gameEngine;
 use function cli\line;
 use function cli\prompt;
 
 function runGame()
 {
-    $name = welcome();
+    $name = welcome("Answer \"yes\" if the number is even, otherwise answer \"no\"");
 
-    line("Answer \"yes\" if the number is even, otherwise answer \"no\"");
-
-    $numberCorrectAnswers = 0;
-    $incorrectAnswer = 0;
     $numberGames = 3;
 
     for ($i = 0; $i < $numberGames; $i++) {
         $startNumber = 0;
         $endNumber = 100;
         $number = rand($startNumber, $endNumber);
-        line("Question: %s", $number);
-        $answer = prompt("Your answer");
-        if (($answer !== "yes") && ($answer !== "no")) {
-            $incorrectAnswer = 1;
-            break;
-        }
-
         if ($number % 2 == 0) {
             $correctAnswer = "yes";
         } else {
             $correctAnswer = "no";
         }
-
-        if ($answer == $correctAnswer) {
-            line("Correct!");
-            $numberCorrectAnswers++;
-        } else {
-            line("%s is wrong answer ;(. ", $answer);
-            line("Correct answer was %s.", $correctAnswer);
-            break;
-        }
+        $gameData[$i][0] = $number;
+        $gameData[$i][1] = $correctAnswer;
     }
-    result($numberCorrectAnswers, $name, $incorrectAnswer);
+    gameEngine($gameData, $name, $numberGames);
 }

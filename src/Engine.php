@@ -19,7 +19,7 @@ function welcome(string $gameDescription = null)
 function gameEngine(array $gameData, string $name, int $numberGames)
 {
     for ($i = 0; $i < $numberGames; $i++) {
-        line("Question: %s", $gameData[$i][0]);
+        line("Question:%s", $gameData[$i][0]);
         (int) $answer = prompt("Your answer");
         if ($answer == $gameData[$i][1]) {
             line("Correct!");

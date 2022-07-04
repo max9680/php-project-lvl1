@@ -9,9 +9,9 @@ use function cli\prompt;
 
 function runGame()
 {
-    $name = welcome();
+    $name = welcome("What is the result of the expression?");
 
-    line("What is the result of the expression?");
+//    line("What is the result of the expression?");
 
     $numberCorrectAnswers = 0;
     $incorrectAnswer = 0;

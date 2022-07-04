@@ -5,11 +5,14 @@ namespace BrainGames\Engine;
 use function cli\line;
 use function cli\prompt;
 
-function welcome()
+function welcome(string $gameDescription = null)
 {
     line("Welcome to the Brain Games!");
     $name = prompt("May I have your name?");
     line("Hello, %s!", $name);
+    if ($gameDescription !== null) {
+        line($gameDescription);
+    }
     return $name;
 }
 

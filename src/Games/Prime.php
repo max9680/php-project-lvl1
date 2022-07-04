@@ -8,6 +8,7 @@ use function BrainGames\Engine\gameEngine;
 function runGame()
 {
     $name = welcome("Answer \"yes\" if given number is prime. Otherwise answer \"no\".");
+    $gameData = [];
     $numberGames = 3;
     for ($i = 0; $i < $numberGames; $i++) {
         $number = rand(1, 100);

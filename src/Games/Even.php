@@ -8,7 +8,7 @@ use function BrainGames\Engine\gameEngine;
 function runGame()
 {
     $name = welcome("Answer \"yes\" if the number is even, otherwise answer \"no\"");
-
+    $gameData = [];
     $numberGames = 3;
 
     for ($i = 0; $i < $numberGames; $i++) {

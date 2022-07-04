@@ -8,6 +8,7 @@ use function BrainGames\Engine\gameEngine;
 function runGame()
 {
     $name = welcome("What number is missing in the progression?");
+    $gameData = [];
     $numberGames = 3;
     for ($i = 0; $i < $numberGames; $i++) {
         $amoutNumbers = rand(5, 10);

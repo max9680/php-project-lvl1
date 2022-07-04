@@ -33,15 +33,3 @@ function gameEngine(array $gameData, string $name, int $numberGames)
         }
     }
 }
-
-function result(int $numberCorrectAnswers, string $name, int $incorrectAnswer)
-{
-    if ($incorrectAnswer == 1) {
-        line("Incorrect answer. ");
-    }
-    if ($numberCorrectAnswers == 3) {
-        line("Congratulations, $name!");
-    } else {
-        line("Let's try again, $name!");
-    }
-}

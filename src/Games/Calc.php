@@ -23,13 +23,13 @@ function runGame()
 
         switch ($operands[$randIndex]) {
             case '+':
-                (int) $operationResult = $firstNumber + $secondNumber;
+                $operationResult = $firstNumber + $secondNumber;
                 break;
             case '-':
-                (int) $operationResult = $firstNumber - $secondNumber;
+                $operationResult = $firstNumber - $secondNumber;
                 break;
             case '*':
-                (int) $operationResult = $firstNumber * $secondNumber;
+                $operationResult = $firstNumber * $secondNumber;
                 break;
         }
         $gameData[$i][0] = $operation;

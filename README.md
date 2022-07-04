@@ -13,6 +13,8 @@ Brain Games is set of five console games. Each game consists from three question
 ```sh
 $ git clone git@github.com:max9680/php-project-lvl1.git
 
+$ cd php-project-lvl1/
+
 $ make install
 ```
 

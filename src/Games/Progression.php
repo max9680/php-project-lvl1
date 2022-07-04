@@ -3,16 +3,11 @@
 namespace BrainGames\Games\Progression;
 
 use function BrainGames\Engine\welcome;
-use function BrainGames\Engine\result;
-use function cli\line;
-use function cli\prompt;
+use function BrainGames\Engine\gameEngine;
 
 function runGame()
 {
-    $name = welcome();
-    line("What number is missing in the progression?");
-    $numberCorrectAnswers = 0;
-    $incorrectAnswer = 0;
+    $name = welcome("What number is missing in the progression?");
     $numberGames = 3;
     for ($i = 0; $i < $numberGames; $i++) {
         $amoutNumbers = rand(5, 10);
@@ -31,23 +26,9 @@ function runGame()
                 $progressionInQuestion = $progressionInQuestion . " " . $progression[$j];
             }
         }
-        line("Question:%s", "$progressionInQuestion");
-        $answer = prompt("Your answer");
-        if (!is_numeric($answer)) {
-            $incorrectAnswer = 1;
-            break;
-        } else {
-            $answer = intval($answer);
-        }
 
-        if ($answer == $progression[$hiddenItem]) {
-            line("Correct!");
-            $numberCorrectAnswers++;
-        } else {
-            line("%s is wrong answer ;(. ", $answer);
-            line("Correct answer was %s.", $progression[$hiddenItem]);
-            break;
-        }
+        $gameData[$i][0] = $progressionInQuestion;
+        $gameData[$i][1] = $progression[$hiddenItem];
     }
-    result($numberCorrectAnswers, $name, $incorrectAnswer);
+    gameEngine($gameData, $name, $numberGames);
 }

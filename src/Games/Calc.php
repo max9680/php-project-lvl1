@@ -4,9 +4,6 @@ namespace BrainGames\Games\Calc;
 
 use function BrainGames\Engine\welcome;
 use function BrainGames\Engine\gameEngine;
-use function BrainGames\Engine\result;
-use function cli\line;
-use function cli\prompt;
 
 function runGame()
 {

@@ -2,12 +2,12 @@
 
 namespace BrainGames\Games\Calc;
 
-use function BrainGames\Engine\welcome;
-use function BrainGames\Engine\gameEngine;
+use function BrainGames\Engine\runWelcome;
+use function BrainGames\Engine\startGame;
 
 function runGame()
 {
-    $name = welcome("What is the result of the expression?");
+    $name = runWelcome("What is the result of the expression?");
     $numberGames = 3;
     (int) $operationResult = null;
     $gameData = [];
@@ -35,5 +35,5 @@ function runGame()
         $gameData[$i][0] = $operation;
         $gameData[$i][1] = $operationResult;
     }
-    gameEngine($gameData, $name, $numberGames);
+    startGame($gameData, $name, $numberGames);
 }

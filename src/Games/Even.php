@@ -2,12 +2,12 @@
 
 namespace BrainGames\Games\Even;
 
-use function BrainGames\Engine\welcome;
-use function BrainGames\Engine\gameEngine;
+use function BrainGames\Engine\runWelcome;
+use function BrainGames\Engine\startGame;
 
 function runGame()
 {
-    $name = welcome("Answer \"yes\" if the number is even, otherwise answer \"no\"");
+    $name = runWelcome("Answer \"yes\" if the number is even, otherwise answer \"no\"");
     $gameData = [];
     $numberGames = 3;
 
@@ -23,5 +23,5 @@ function runGame()
         $gameData[$i][0] = $number;
         $gameData[$i][1] = $correctAnswer;
     }
-    gameEngine($gameData, $name, $numberGames);
+    startGame($gameData, $name, $numberGames);
 }

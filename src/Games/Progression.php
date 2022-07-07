@@ -2,12 +2,12 @@
 
 namespace BrainGames\Games\Progression;
 
-use function BrainGames\Engine\welcome;
-use function BrainGames\Engine\gameEngine;
+use function BrainGames\Engine\runWelcome;
+use function BrainGames\Engine\startGame;
 
 function runGame()
 {
-    $name = welcome("What number is missing in the progression?");
+    $name = runWelcome("What number is missing in the progression?");
     $gameData = [];
     $numberGames = 3;
     for ($i = 0; $i < $numberGames; $i++) {
@@ -31,5 +31,5 @@ function runGame()
         $gameData[$i][0] = ltrim($progressionInQuestion);
         $gameData[$i][1] = $progression[$hiddenItem];
     }
-    gameEngine($gameData, $name, $numberGames);
+    startGame($gameData, $name, $numberGames);
 }

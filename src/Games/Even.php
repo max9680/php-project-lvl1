@@ -10,7 +10,7 @@ function runGame()
     $name = runWelcome("Answer \"yes\" if the number is even, otherwise answer \"no\"");
     $gameData = [];
 
-    for ($i = 0; $i < $numberGames; $i++) {
+    for ($i = 0; $i < 3; $i++) {
         $startNumber = 0;
         $endNumber = 100;
         $number = rand($startNumber, $endNumber);

@@ -9,7 +9,7 @@ function runGame()
 {
     $name = runWelcome("Find the greatest common divisor of given numbers.");
     $gameData = [];
-    for ($i = 0; $i < $numberGames; $i++) {
+    for ($i = 0; $i < 3; $i++) {
         $startNumber = 1;
         $endNumber = 100;
         $numberOne = rand($startNumber, $endNumber);

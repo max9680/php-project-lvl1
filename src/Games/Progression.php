@@ -9,7 +9,7 @@ function runGame()
 {
     $name = runWelcome("What number is missing in the progression?");
     $gameData = [];
-    for ($i = 0; $i < $numberGames; $i++) {
+    for ($i = 0; $i < 3; $i++) {
         $amoutNumbers = rand(5, 10);
         $startNumber = rand(1, 10);
         $sumProgression = rand(1, 10);

@@ -11,7 +11,7 @@ function runGame()
     $operationResult = null;
     $gameData = [];
 
-    for ($i = 0; $i < $numberGames; $i++) {
+    for ($i = 0; $i < 3; $i++) {
         $startNumber = 0;
         $endNumber = 100;
         $operands = ['+','-','*'];

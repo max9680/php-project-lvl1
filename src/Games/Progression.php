@@ -29,7 +29,7 @@ function runGame()
         }
 
         $gameData[$i][0] = ltrim($progressionInQuestion);
-        $gameData[$i][1] = $progression[$hiddenItem];
+        $gameData[$i][1] = strval($progression[$hiddenItem]);
     }
     startGame($gameData, $name, $numberGames);
 }

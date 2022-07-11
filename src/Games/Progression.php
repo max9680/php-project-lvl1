@@ -9,7 +9,6 @@ function runGame()
 {
     $name = runWelcome("What number is missing in the progression?");
     $gameData = [];
-    $numberGames = 3;
     for ($i = 0; $i < $numberGames; $i++) {
         $amoutNumbers = rand(5, 10);
         $startNumber = rand(1, 10);
@@ -31,5 +30,5 @@ function runGame()
         $gameData[$i][0] = ltrim($progressionInQuestion);
         $gameData[$i][1] = strval($progression[$hiddenItem]);
     }
-    startGame($gameData, $name, $numberGames);
+    startGame($gameData, $name);
 }

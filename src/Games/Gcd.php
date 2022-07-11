@@ -9,7 +9,6 @@ function runGame()
 {
     $name = runWelcome("Find the greatest common divisor of given numbers.");
     $gameData = [];
-    $numberGames = 3;
     for ($i = 0; $i < $numberGames; $i++) {
         $startNumber = 1;
         $endNumber = 100;
@@ -32,5 +31,5 @@ function runGame()
         $gameData[$i][0] = "$numberOne $numberTwo";
         $gameData[$i][1] = strval($correctAnswer);
     }
-    startGame($gameData, $name, $numberGames);
+    startGame($gameData, $name);
 }

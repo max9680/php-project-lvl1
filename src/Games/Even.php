@@ -9,7 +9,6 @@ function runGame()
 {
     $name = runWelcome("Answer \"yes\" if the number is even, otherwise answer \"no\"");
     $gameData = [];
-    $numberGames = 3;
 
     for ($i = 0; $i < $numberGames; $i++) {
         $startNumber = 0;
@@ -23,5 +22,5 @@ function runGame()
         $gameData[$i][0] = $number;
         $gameData[$i][1] = $correctAnswer;
     }
-    startGame($gameData, $name, $numberGames);
+    startGame($gameData, $name);
 }

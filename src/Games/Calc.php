@@ -9,7 +9,7 @@ function runGame()
 {
     $name = runWelcome("What is the result of the expression?");
     $numberGames = 3;
-    (int) $operationResult = null;
+    $operationResult = null;
     $gameData = [];
 
     for ($i = 0; $i < $numberGames; $i++) {

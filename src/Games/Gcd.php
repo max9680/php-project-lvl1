@@ -30,7 +30,7 @@ function runGame()
             $correctAnswer--;
         }
         $gameData[$i][0] = "$numberOne $numberTwo";
-        $gameData[$i][1] = $correctAnswer;
+        $gameData[$i][1] = strval($correctAnswer);
     }
     startGame($gameData, $name, $numberGames);
 }

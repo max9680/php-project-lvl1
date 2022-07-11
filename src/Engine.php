@@ -23,13 +23,11 @@ function startGame(array $gameData, string $name, int $numberGames)
         $answer = prompt("Your answer");
         if ($answer === $gameData[$i][1]) {
             line("Correct!");
-            if ($i == ($numberGames - 1)) {
-                line("Congratulations, %s!", $name);
-            }
         } else {
             line("'%s' is wrong answer ;(. Correct answer was '%s'.", $answer, $gameData[$i][1]);
             line("Let's try again, $name!");
             return;
         }
     }
+    line("Congratulations, %s!", $name);
 }

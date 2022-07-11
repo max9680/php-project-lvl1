@@ -33,7 +33,7 @@ function runGame()
                 break;
         }
         $gameData[$i][0] = $operation;
-        $gameData[$i][1] = $operationResult;
+        $gameData[$i][1] = strval($operationResult);
     }
     startGame($gameData, $name, $numberGames);
 }

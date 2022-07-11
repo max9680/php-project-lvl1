@@ -27,7 +27,7 @@ function runGame()
             }
         }
         $gameData[$i][0] = $number;
-        $gameData[$i][1] = $correctAnswer;
+        $gameData[$i][1] = strval($correctAnswer);
     }
     startGame($gameData, $name, $numberGames);
 }

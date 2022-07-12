@@ -15,7 +15,7 @@ function runWelcome()
     return $name;
 }
 
-function startGame(array $gameData, string $name, $gameDescription)
+function startGame(array $gameData, string $name, string $gameDescription)
 {
     line($gameDescription);
     for ($i = 0; $i < GAME_ROUNDS; $i++) {

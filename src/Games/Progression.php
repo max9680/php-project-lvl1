@@ -7,7 +7,7 @@ use function BrainGames\Engine\startGame;
 
 function runGame()
 {
-    $name = runWelcome("What number is missing in the progression?");
+    $name = runWelcome();
     $gameDescription = "What number is missing in the progression?";
     $gameData = [];
     for ($i = 0; $i < 3; $i++) {

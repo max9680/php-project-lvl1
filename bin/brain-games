@@ -9,6 +9,6 @@ if (file_exists($autoloadPath1)) {
     require_once $autoloadPath2;
 }
 
-use function BrainGames\Engine\runWelcome;
+use function BrainGames\Engine\getUserName;
 
-runWelcome();
+getUserName();

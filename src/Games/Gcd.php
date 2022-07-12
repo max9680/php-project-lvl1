@@ -2,12 +2,12 @@
 
 namespace BrainGames\Games\Gcd;
 
-use function BrainGames\Engine\runWelcome;
+use function BrainGames\Engine\getUserName;
 use function BrainGames\Engine\startGame;
 
 function runGame()
 {
-    $name = runWelcome();
+    $name = getUserName();
     $gameDescription = "Find the greatest common divisor of given numbers.";
     $gameData = [];
     for ($i = 0; $i < 3; $i++) {

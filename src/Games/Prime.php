@@ -7,7 +7,8 @@ use function BrainGames\Engine\startGame;
 
 function runGame()
 {
-    $name = runWelcome("Answer \"yes\" if given number is prime. Otherwise answer \"no\".");
+    $name = runWelcome();
+    $gameDescription = "Answer \"yes\" if given number is prime. Otherwise answer \"no\".";
     $gameData = [];
     (string) $correctAnswer = null;
     for ($i = 0; $i < 3; $i++) {
@@ -28,5 +29,5 @@ function runGame()
         $gameData[$i][0] = $number;
         $gameData[$i][1] = strval($correctAnswer);
     }
-    startGame($gameData, $name);
+    startGame($gameData, $name, $gameDescription);
 }

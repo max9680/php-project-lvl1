@@ -7,7 +7,8 @@ use function BrainGames\Engine\startGame;
 
 function runGame()
 {
-    $name = runWelcome("Answer \"yes\" if the number is even, otherwise answer \"no\"");
+    $name = runWelcome();
+    $gameDescription = "Answer \"yes\" if the number is even, otherwise answer \"no\"";
     $gameData = [];
 
     for ($i = 0; $i < 3; $i++) {
@@ -22,5 +23,5 @@ function runGame()
         $gameData[$i][0] = $number;
         $gameData[$i][1] = $correctAnswer;
     }
-    startGame($gameData, $name);
+    startGame($gameData, $name, $gameDescription);
 }

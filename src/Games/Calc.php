@@ -7,8 +7,9 @@ use function BrainGames\Engine\startGame;
 
 function runGame()
 {
-    $name = runWelcome("What is the result of the expression?");
+    $name = runWelcome();
     $operationResult = null;
+    $gameDescription = "What is the result of the expression?";
     $gameData = [];
 
     for ($i = 0; $i < 3; $i++) {
@@ -34,5 +35,5 @@ function runGame()
         $gameData[$i][0] = $operation;
         $gameData[$i][1] = strval($operationResult);
     }
-    startGame($gameData, $name);
+    startGame($gameData, $name, $gameDescription);
 }

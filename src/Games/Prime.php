@@ -17,10 +17,10 @@ function runGame()
             $correctAnswer = "no";
         }
         for ($j = 2; $j <= ($number / 2); $j++) {
-                if ($number % $j == 0) {
-                    $correctAnswer = "no";
-                    break;
-                }
+            if ($number % $j == 0) {
+                $correctAnswer = "no";
+                break;
+            }
         }
         $gameData[$i][0] = $number;
         $gameData[$i][1] = strval($correctAnswer);

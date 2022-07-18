@@ -3,6 +3,7 @@
 namespace BrainGames\Games\Progression;
 
 use function BrainGames\Engine\startGame;
+
 const GAME_DESCRIPTION = "What number is missing in the progression?";
 
 function runGame()

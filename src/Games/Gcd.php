@@ -3,6 +3,7 @@
 namespace BrainGames\Games\Gcd;
 
 use function BrainGames\Engine\startGame;
+
 const GAME_DESCRIPTION = "Find the greatest common divisor of given numbers.";
 
 function runGame()

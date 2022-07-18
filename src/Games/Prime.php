@@ -2,12 +2,12 @@
 
 namespace BrainGames\Games\Prime;
 
-use function BrainGames\Engine\getUserName;
+use function BrainGames\Engine\runGreeting;
 use function BrainGames\Engine\startGame;
 
 function runGame()
 {
-    $name = getUserName();
+    $name = runGreeting();
     $gameDescription = "Answer \"yes\" if given number is prime. Otherwise answer \"no\".";
     $gameData = [];
     (string) $correctAnswer = null;

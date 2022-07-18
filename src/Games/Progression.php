@@ -2,12 +2,12 @@
 
 namespace BrainGames\Games\Progression;
 
-use function BrainGames\Engine\getUserName;
+use function BrainGames\Engine\runGreeting;
 use function BrainGames\Engine\startGame;
 
 function runGame()
 {
-    $name = getUserName();
+    $name = runGreeting();
     $gameDescription = "What number is missing in the progression?";
     $gameData = [];
     for ($i = 0; $i < 3; $i++) {

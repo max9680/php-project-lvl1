@@ -2,7 +2,6 @@
 
 namespace BrainGames\Games\Even;
 
-use function BrainGames\Engine\runGreeting;
 use function BrainGames\Engine\startGame;
 
 function runGame()

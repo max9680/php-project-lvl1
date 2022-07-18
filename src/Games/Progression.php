@@ -7,7 +7,6 @@ use function BrainGames\Engine\startGame;
 
 function runGame()
 {
-    $name = runGreeting();
     $gameDescription = "What number is missing in the progression?";
     $gameData = [];
     for ($i = 0; $i < 3; $i++) {
@@ -31,5 +30,5 @@ function runGame()
         $gameData[$i][0] = ltrim($progressionInQuestion);
         $gameData[$i][1] = strval($progression[$hiddenItem]);
     }
-    startGame($gameData, $name, $gameDescription);
+    startGame($gameData, $gameDescription);
 }

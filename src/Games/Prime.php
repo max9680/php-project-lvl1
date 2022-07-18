@@ -12,18 +12,15 @@ function runGame()
     (string) $correctAnswer = null;
     for ($i = 0; $i < 3; $i++) {
         $number = rand(1, 100);
-        if ($number <= 2) {
-            $correctAnswer = "yes";
-        } else {
-            for ($j = 2; $j < $number; $j++) {
+        $correctAnswer = "yes";
+        if ($number < 2) {
+            $correctAnswer = "no";
+        }
+        for ($j = 2; $j <= ($number / 2); $j++) {
                 if ($number % $j == 0) {
                     $correctAnswer = "no";
                     break;
                 }
-                if ($number == ($j + 1)) {
-                    $correctAnswer = "yes";
-                }
-            }
         }
         $gameData[$i][0] = $number;
         $gameData[$i][1] = strval($correctAnswer);

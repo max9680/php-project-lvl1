@@ -6,7 +6,7 @@ use function BrainGames\Engine\startGame;
 
 const GAME_DESCRIPTION = "What is the result of the expression?";
 
-function getArithmeticOperation($firstNumber, $secondNumber, $stringOperator)
+function getArithmeticOperation(int $firstNumber, int $secondNumber, string $stringOperator)
 {
     switch ($stringOperator) {
         case '+':

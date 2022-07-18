@@ -4,13 +4,15 @@ namespace BrainGames\Games\Gcd;
 
 use function BrainGames\Engine\startGame;
 
+use const BrainGames\Engine\ROUNDS_COUNT;
+
 const GAME_DESCRIPTION = "Find the greatest common divisor of given numbers.";
 
 function runGame()
 {
 
     $gameData = [];
-    for ($i = 0; $i < 3; $i++) {
+    for ($i = 0; $i < ROUNDS_COUNT; $i++) {
         $startNumber = 1;
         $endNumber = 100;
         $numberOne = rand($startNumber, $endNumber);

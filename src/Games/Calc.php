@@ -4,6 +4,8 @@ namespace BrainGames\Games\Calc;
 
 use function BrainGames\Engine\startGame;
 
+use const BrainGames\Engine\ROUNDS_COUNT;
+
 const GAME_DESCRIPTION = "What is the result of the expression?";
 
 function getArithmeticOperation(int $firstNumber, int $secondNumber, string $stringOperator)
@@ -31,7 +33,7 @@ function runGame()
     $operationResult = null;
     $gameData = [];
 
-    for ($i = 0; $i < 3; $i++) {
+    for ($i = 0; $i < ROUNDS_COUNT; $i++) {
         $startNumber = 0;
         $endNumber = 100;
         $operands = ['+','-','*'];

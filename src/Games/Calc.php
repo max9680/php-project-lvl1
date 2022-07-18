@@ -10,19 +10,20 @@ function getArithmeticOperation(int $firstNumber, int $secondNumber, string $str
 {
     switch ($stringOperator) {
         case '+':
-            return ($firstNumber + $secondNumber);
+            $operationResult = $firstNumber + $secondNumber;
             break;
         case '-':
-            return ($firstNumber - $secondNumber);
+            $operationResult = $firstNumber - $secondNumber;
             break;
         case '*':
-            return ($firstNumber * $secondNumber);
+            $operationResult = $firstNumber * $secondNumber;
             break;
         default:
             print_r("Unknown arithmetic operation: '$stringOperator'");
-            return null;
+            $operationResult = null;
             break;
     }
+    return $operationResult;
 }
 
 function runGame()

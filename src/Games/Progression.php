@@ -3,10 +3,10 @@
 namespace BrainGames\Games\Progression;
 
 use function BrainGames\Engine\startGame;
+const GAME_DESCRIPTION = "What number is missing in the progression?";
 
 function runGame()
 {
-    $gameDescription = "What number is missing in the progression?";
     $gameData = [];
     for ($i = 0; $i < 3; $i++) {
         $amoutNumbers = rand(5, 10);
@@ -29,5 +29,5 @@ function runGame()
         $gameData[$i][0] = ltrim($progressionInQuestion);
         $gameData[$i][1] = strval($progression[$hiddenItem]);
     }
-    startGame($gameData, $gameDescription);
+    startGame($gameData, GAME_DESCRIPTION);
 }

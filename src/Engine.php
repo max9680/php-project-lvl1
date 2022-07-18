@@ -5,15 +5,15 @@ namespace BrainGames\Engine;
 use function cli\line;
 use function cli\prompt;
 
-function startGame(array $gameData, string $gameDescription = null)
+function startGame(array $gameData, string $GAME_DESCRIPTION)
 {
     line("Welcome to the Brain Games!");
     $name = prompt("May I have your name?");
     line("Hello, %s!", $name);
-    if ($gameDescription === null) {
+    if ($GAME_DESCRIPTION === null) {
         return;
     }
-    line($gameDescription);
+    line($GAME_DESCRIPTION);
     foreach ($gameData as [$question, $correctAnswer]) {
         line("Question: %s", $question);
         $answer = prompt("Your answer");

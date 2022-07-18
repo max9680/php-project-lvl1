@@ -3,10 +3,10 @@
 namespace BrainGames\Games\Even;
 
 use function BrainGames\Engine\startGame;
+const GAME_DESCRIPTION = "Answer \"yes\" if the number is even, otherwise answer \"no\"";
 
 function runGame()
 {
-    $gameDescription = "Answer \"yes\" if the number is even, otherwise answer \"no\"";
     $gameData = [];
 
     for ($i = 0; $i < 3; $i++) {
@@ -21,5 +21,5 @@ function runGame()
         $gameData[$i][0] = $number;
         $gameData[$i][1] = $correctAnswer;
     }
-    startGame($gameData, $gameDescription);
+    startGame($gameData, GAME_DESCRIPTION);
 }

@@ -3,10 +3,10 @@
 namespace BrainGames\Games\Prime;
 
 use function BrainGames\Engine\startGame;
+const GAME_DESCRIPTION = "Answer \"yes\" if given number is prime. Otherwise answer \"no\".";
 
 function runGame()
 {
-    $gameDescription = "Answer \"yes\" if given number is prime. Otherwise answer \"no\".";
     $gameData = [];
     (string) $correctAnswer = null;
     for ($i = 0; $i < 3; $i++) {
@@ -27,5 +27,5 @@ function runGame()
         $gameData[$i][0] = $number;
         $gameData[$i][1] = strval($correctAnswer);
     }
-    startGame($gameData, $gameDescription);
+    startGame($gameData, GAME_DESCRIPTION);
 }

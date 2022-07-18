@@ -12,7 +12,7 @@ function runGame()
     (string) $correctAnswer = null;
     for ($i = 0; $i < 3; $i++) {
         $number = rand(1, 100);
-        if ($number == 1) {
+        if ($number <= 2) {
             $correctAnswer = "yes";
         } else {
             for ($j = 2; $j < $number; $j++) {

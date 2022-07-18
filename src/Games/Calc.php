@@ -40,8 +40,7 @@ function runGame()
         $randIndex = array_rand($operands, 1);
         $operation = $firstNumber . " " . $operands[$randIndex] . " " . $secondNumber;
         $operationResult = getArithmeticOperation($firstNumber, $secondNumber, $operands[$randIndex]);
-        $gameData[$i][0] = $operation;
-        $gameData[$i][1] = strval($operationResult);
+        $gameData[] = [$operation, (string) $operationResult];
     }
     startGame($gameData, GAME_DESCRIPTION);
 }

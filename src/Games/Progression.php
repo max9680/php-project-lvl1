@@ -26,9 +26,7 @@ function runGame()
                 $progressionInQuestion = $progressionInQuestion . " " . $progression[$j];
             }
         }
-
-        $gameData[$i][0] = ltrim($progressionInQuestion);
-        $gameData[$i][1] = strval($progression[$hiddenItem]);
+        $gameData[] = [ltrim($progressionInQuestion), (string) $progression[$hiddenItem]];
     }
     startGame($gameData, GAME_DESCRIPTION);
 }

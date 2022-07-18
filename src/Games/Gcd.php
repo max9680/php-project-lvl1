@@ -29,8 +29,7 @@ function runGame()
             }
             $correctAnswer--;
         }
-        $gameData[$i][0] = "$numberOne $numberTwo";
-        $gameData[$i][1] = strval($correctAnswer);
+        $gameData[] = ["$numberOne $numberTwo", (string) $correctAnswer];
     }
     startGame($gameData, GAME_DESCRIPTION);
 }

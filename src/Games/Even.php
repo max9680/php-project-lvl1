@@ -19,7 +19,7 @@ function runGame()
         } else {
             $correctAnswer = "no";
         }
-        $gameData[] = [$number, (string) $correctAnswer];
+        $gameData[] = [$number, $correctAnswer];
     }
     startGame($gameData, GAME_DESCRIPTION);
 }

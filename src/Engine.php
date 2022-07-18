@@ -16,7 +16,7 @@ function runGreeting()
 function startGame(array $gameData, string $name, string $gameDescription)
 {
     line($gameDescription);
-    foreach ($gameData as [0 => $question, 1 => $correctAnswer]) {
+    foreach ($gameData as [$question, $correctAnswer]) {
         line("Question: %s", $question);
         $answer = prompt("Your answer");
         if ($answer === $correctAnswer) {

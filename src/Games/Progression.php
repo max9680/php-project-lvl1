@@ -15,11 +15,9 @@ function runGame()
         $amoutNumbers = rand(5, 10);
         $startNumber = rand(1, 10);
         $sumProgression = rand(1, 10);
-        $progression = array();
+        $progression = [];
         $hiddenItem = rand(0, $amoutNumbers - 1);
         $progressionInQuestion = '';
-
-        //Creating progression
         for ($j = 0; $j < $amoutNumbers; $j++) {
             $progression[$j] = $startNumber + $j * $sumProgression;
             if ($j == $hiddenItem) {

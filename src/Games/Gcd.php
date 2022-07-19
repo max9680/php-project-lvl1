@@ -8,6 +8,25 @@ use const BrainGames\Engine\ROUNDS_COUNT;
 
 const GAME_DESCRIPTION = "Find the greatest common divisor of given numbers.";
 
+function getCommonDivider($numberOne, $numberTwo)
+{
+    if ($numberOne > $numberTwo) {
+        $firstNumber = $numberTwo;
+        $secondNumber = $numberOne;
+    } else {
+        $firstNumber = $numberOne;
+        $secondNumber = $numberTwo;
+    }
+    $correctAnswer = $firstNumber;
+    while ($correctAnswer > 0) {
+        if ((($firstNumber % $correctAnswer ) == 0) && (($secondNumber % $correctAnswer ) == 0)) {
+            break;
+        }
+        $correctAnswer--;
+    }
+    return $correctAnswer;
+}
+
 function runGame()
 {
 
@@ -17,20 +36,7 @@ function runGame()
         $endNumber = 100;
         $numberOne = rand($startNumber, $endNumber);
         $numberTwo = rand($startNumber, $endNumber);
-        if ($numberOne > $numberTwo) {
-            $firstNumber = $numberTwo;
-            $secondNumber = $numberOne;
-        } else {
-            $firstNumber = $numberOne;
-            $secondNumber = $numberTwo;
-        }
-        $correctAnswer = $firstNumber;
-        while ($correctAnswer > 0) {
-            if ((($firstNumber % $correctAnswer ) == 0) && (($secondNumber % $correctAnswer ) == 0)) {
-                break;
-            }
-            $correctAnswer--;
-        }
+        $correctAnswer = getCommonDivider($numberOne, $numberTwo);
         $gameData[] = ["$numberOne $numberTwo", (string) $correctAnswer];
     }
     startGame($gameData, GAME_DESCRIPTION);

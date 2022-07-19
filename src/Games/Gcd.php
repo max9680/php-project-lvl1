@@ -10,10 +10,10 @@ const GAME_DESCRIPTION = "Find the greatest common divisor of given numbers.";
 
 function getCommonDivider(int $number1, int $number2)
 {
-  while ($number1 !== 0 && $number2 !== 0) {
-    ($number1 > $number2) ? ($number1 = $number1 % $number2) : ($number2 = $number2 % $number1);
-  }
-  return ($number1 + $number2);
+    while ($number1 !== 0 && $number2 !== 0) {
+        ($number1 > $number2) ? ($number1 = $number1 % $number2) : ($number2 = $number2 % $number1);
+    }
+    return ($number1 + $number2);
 }
 
 function runGame()

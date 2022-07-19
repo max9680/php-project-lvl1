@@ -14,12 +14,12 @@ function runGame()
     for ($i = 0; $i < ROUNDS_COUNT; $i++) {
         $amoutNumbers = rand(5, 10);
         $startNumber = rand(1, 10);
-        $sumProgression = rand(1, 10);
+        $progressionStep = rand(1, 10);
         $progression = [];
         $hiddenItem = rand(0, $amoutNumbers - 1);
         $progressionInQuestion = '';
         for ($j = 0; $j < $amoutNumbers; $j++) {
-            $progression[$j] = $startNumber + $j * $sumProgression;
+            $progression[$j] = $startNumber + $j * $progressionStep;
             if ($j == $hiddenItem) {
                 $progressionInQuestion = $progressionInQuestion . ' ..';
             } else {

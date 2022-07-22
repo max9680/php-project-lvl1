@@ -9,7 +9,6 @@ if (file_exists($autoloadPath1)) {
     require_once $autoloadPath2;
 }
 
-use function BrainGames\Engine\startGame;
+use function BrainGames\Cli\runWelcome;
 
-$gameData[] = null;
-startGame($gameData);
+runWelcome();

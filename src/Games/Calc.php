@@ -29,9 +29,10 @@ function getOperationResult(int $firstNumber, int $secondNumber, string $stringO
 function runGame()
 {
     $gameData = [];
+    $startNumber = 0;
+    $endNumber = 100;
+
     for ($i = 0; $i < ROUNDS_COUNT; $i++) {
-        $startNumber = 0;
-        $endNumber = 100;
         $operands = ['+','-','*'];
         $firstNumber = rand($startNumber, $endNumber);
         $secondNumber = rand($startNumber, $endNumber);

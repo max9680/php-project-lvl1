@@ -8,7 +8,7 @@ use const BrainGames\Engine\ROUNDS_COUNT;
 
 const GAME_DESCRIPTION = "What is the result of the expression?";
 
-function getArithmeticOperation(int $firstNumber, int $secondNumber, string $stringOperator)
+function getOperationResult(int $firstNumber, int $secondNumber, string $stringOperator)
 {
     switch ($stringOperator) {
         case '+':
@@ -38,7 +38,7 @@ function runGame()
         $secondNumber = rand($startNumber, $endNumber);
         $randIndex = array_rand($operands, 1);
         $operation = $firstNumber . " " . $operands[$randIndex] . " " . $secondNumber;
-        $operationResult = getArithmeticOperation($firstNumber, $secondNumber, $operands[$randIndex]);
+        $operationResult = getOperationResult($firstNumber, $secondNumber, $operands[$randIndex]);
         $gameData[] = [$operation, (string) $operationResult];
     }
     startGame($gameData, GAME_DESCRIPTION);

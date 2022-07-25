@@ -13,18 +13,17 @@ function getArithmeticOperation(int $firstNumber, int $secondNumber, string $str
     switch ($stringOperator) {
         case '+':
             $operationResult = $firstNumber + $secondNumber;
-            break;
+            return $operationResult;
         case '-':
             $operationResult = $firstNumber - $secondNumber;
-            break;
+            return $operationResult;
         case '*':
             $operationResult = $firstNumber * $secondNumber;
-            break;
+            return $operationResult;
         default:
             $operationResult = null;
             throw new \Exception("Unknown arithmetic operation: '$stringOperator'");
     }
-    return $operationResult;
 }
 
 function runGame()

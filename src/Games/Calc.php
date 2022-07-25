@@ -23,7 +23,6 @@ function getArithmeticOperation(int $firstNumber, int $secondNumber, string $str
         default:
             $operationResult = null;
             throw new \Exception("Unknown arithmetic operation: '$stringOperator'");
-            break;
     }
     return $operationResult;
 }

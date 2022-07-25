@@ -28,7 +28,6 @@ function getOperationResult(int $firstNumber, int $secondNumber, string $stringO
 
 function runGame()
 {
-    $operationResult = null;
     $gameData = [];
     for ($i = 0; $i < ROUNDS_COUNT; $i++) {
         $startNumber = 0;

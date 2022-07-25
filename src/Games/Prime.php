@@ -11,14 +11,14 @@ const GAME_DESCRIPTION = 'Answer "yes" if given number is prime. Otherwise answe
 function isPrime(int $number)
 {
     if ($number < 2) {
-        return "no";
+        return false;
     }
     for ($j = 2; $j <= ($number / 2); $j++) {
         if ($number % $j == 0) {
-            return"no";
+            return false;
         }
     }
-    return "yes";
+    return true;
 }
 
 function runGame()
@@ -27,7 +27,7 @@ function runGame()
     (string) $correctAnswer = null;
     for ($i = 0; $i < ROUNDS_COUNT; $i++) {
         $number = rand(1, 100);
-        $correctAnswer = isPrime($number);
+        $correctAnswer = (isPrime($number)) ? "yes" : "no";
         $gameData[] = [$number, $correctAnswer];
     }
     startGame($gameData, GAME_DESCRIPTION);

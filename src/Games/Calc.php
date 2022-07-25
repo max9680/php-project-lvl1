@@ -21,7 +21,7 @@ function getArithmeticOperation(int $firstNumber, int $secondNumber, string $str
             $operationResult = $firstNumber * $secondNumber;
             break;
         default:
-            print_r("Unknown arithmetic operation: '$stringOperator'");
+            throw new \Exception("Unknown arithmetic operation: '$stringOperator'");
             $operationResult = null;
             break;
     }

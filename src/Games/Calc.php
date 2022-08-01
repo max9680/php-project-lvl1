@@ -18,7 +18,6 @@ function getOperationResult(int $firstNumber, int $secondNumber, string $stringO
         case '*':
             return $firstNumber * $secondNumber;
         default:
-            $operationResult = null;
             throw new \Exception("Unknown arithmetic operation: '$stringOperator'");
     }
 }

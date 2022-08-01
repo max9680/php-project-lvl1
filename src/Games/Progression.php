@@ -26,7 +26,7 @@ function runGame()
 
         $progressionArray = $progression;
         $progressionArray[$hiddenItem] = "..";
-        $progressionInQuestion = implode(",", $progressionArray);
+        $progressionInQuestion = implode(" ", $progressionArray);
 
         $gameData[] = [$progressionInQuestion, (string) $progression[$hiddenItem]];
     }

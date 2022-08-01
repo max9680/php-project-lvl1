@@ -29,7 +29,7 @@ function runGame()
         $number = rand(1, 100);
 
         $correctAnswer = (isPrime($number)) ? "yes" : "no";
-        
+
         $gameData[] = [$number, $correctAnswer];
     }
     startGame($gameData, GAME_DESCRIPTION);

@@ -37,7 +37,7 @@ function runGame()
         $operation = $firstNumber . " " . $operands[$randIndex] . " " . $secondNumber;
 
         $operationResult = getOperationResult($firstNumber, $secondNumber, $operands[$randIndex]);
-        
+
         $gameData[] = [$operation, (string) $operationResult];
     }
     startGame($gameData, GAME_DESCRIPTION);

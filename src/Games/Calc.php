@@ -12,14 +12,11 @@ function getOperationResult(int $firstNumber, int $secondNumber, string $stringO
 {
     switch ($stringOperator) {
         case '+':
-            $operationResult = $firstNumber + $secondNumber;
-            return $operationResult;
+            return $firstNumber + $secondNumber;
         case '-':
-            $operationResult = $firstNumber - $secondNumber;
-            return $operationResult;
+            return $firstNumber - $secondNumber;
         case '*':
-            $operationResult = $firstNumber * $secondNumber;
-            return $operationResult;
+            return $firstNumber * $secondNumber;
         default:
             $operationResult = null;
             throw new \Exception("Unknown arithmetic operation: '$stringOperator'");

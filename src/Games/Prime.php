@@ -24,7 +24,6 @@ function isPrime(int $number)
 function runGame()
 {
     $gameData = [];
-    (string) $correctAnswer = null;
     for ($i = 0; $i < ROUNDS_COUNT; $i++) {
         $number = rand(1, 100);
 

@@ -22,12 +22,11 @@ function runGame()
 
         for ($j = 0; $j < $amoutNumbers; $j++) {
             $progression[$j] = $startNumber + $j * $progressionStep;
-            if ($j == $hiddenItem) {
-                $progressionInQuestion = $progressionInQuestion . ' ..';
-            } else {
-                $progressionInQuestion = $progressionInQuestion . " " . $progression[$j];
-            }
         }
+        
+        $progressionArray = $progression;
+        $progressionArray[$hiddenItem] = "..";
+        $progressionInQuestion = implode(",", $progressionArray);
 
         $gameData[] = [ltrim($progressionInQuestion), (string) $progression[$hiddenItem]];
     }

@@ -16,7 +16,9 @@ function runGame()
         $startNumber = 0;
         $endNumber = 100;
         $number = rand($startNumber, $endNumber);
+
         $correctAnswer = ($number % 2 == 0) ? "yes" : "no";
+        
         $gameData[] = [$number, $correctAnswer];
     }
     startGame($gameData, GAME_DESCRIPTION);

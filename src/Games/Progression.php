@@ -17,7 +17,9 @@ function runGame()
         $progressionStep = rand(1, 10);
         $progression = [];
         $hiddenItem = rand(0, $amoutNumbers - 1);
+        
         $progressionInQuestion = '';
+
         for ($j = 0; $j < $amoutNumbers; $j++) {
             $progression[$j] = $startNumber + $j * $progressionStep;
             if ($j == $hiddenItem) {
@@ -26,6 +28,7 @@ function runGame()
                 $progressionInQuestion = $progressionInQuestion . " " . $progression[$j];
             }
         }
+
         $gameData[] = [ltrim($progressionInQuestion), (string) $progression[$hiddenItem]];
     }
     startGame($gameData, GAME_DESCRIPTION);

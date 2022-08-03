@@ -33,10 +33,11 @@ function runGame()
         $firstNumber = rand($startNumber, $endNumber);
         $secondNumber = rand($startNumber, $endNumber);
         $randIndex = array_rand($operands);
+        $operand = $operands[$randIndex];
 
-        $expression = $firstNumber . " " . $operands[$randIndex] . " " . $secondNumber;
+        $expression = $firstNumber . " " . $operand . " " . $secondNumber;
 
-        $operationResult = getOperationResult($firstNumber, $secondNumber, $operands[$randIndex]);
+        $operationResult = getOperationResult($firstNumber, $secondNumber, $operand);
 
         $gameData[] = [$expression, (string) $operationResult];
     }

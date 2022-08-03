@@ -16,17 +16,18 @@ function runGame()
         $startNumber = rand(1, 10);
         $progressionStep = rand(1, 10);
         $progression = [];
-        $hiddenItem = rand(0, $amoutNumbers - 1);
+        $indexHiddenItem = rand(0, $amoutNumbers - 1);
 
         for ($j = 0; $j < $amoutNumbers; $j++) {
             $progression[$j] = $startNumber + $j * $progressionStep;
         }
 
-        $progressionArray = $progression;
-        $progressionArray[$hiddenItem] = "..";
-        $progressionInQuestion = implode(" ", $progressionArray);
+        $hiddenItem = $progression[$indexHiddenItem];
 
-        $gameData[] = [$progressionInQuestion, (string) $progression[$hiddenItem]];
+        $progression[$indexHiddenItem] = "..";
+        $progressionInQuestion = implode(" ", $progression);
+
+        $gameData[] = [$progressionInQuestion, (string) $hiddenItem];
     }
     startGame($gameData, GAME_DESCRIPTION);
 }
